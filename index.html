@@ -7,27 +7,29 @@
 
 <canvas id="monthChart"></canvas>
 <script>
-	//from the documentation 
+	//from the documentation
 	var ctx = document.getElementById('monthChart').getContext('2d');
 	var chart = new Chart(ctx, {
     // The type of chart we want to create
-    type: 'line',
+    type: 'pie',
 
     // The data for our dataset
     data: {
-    	labels: ["January", "February", "March", "April", "May", "June", "July"],
     	datasets: [{
-    		label: "My First dataset",
-    		backgroundColor: 'rgb(255, 99, 132)',
-    		borderColor: 'rgb(255, 99, 132)',
-    		data: [0, 10, 5, 2, 20, 30, 45],
-    	}]
+				data: [29, 71],
+				backgroundColor: ["#f2b424", "#460996"]
+			}],
+			labels: [
+				'April',
+				'May'
+			]
+
     },
 
     // Configuration options go here
     options: {}
 	});
-	
+
 </script>
 </body>
 </html>
